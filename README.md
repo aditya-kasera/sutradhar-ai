@@ -11,6 +11,8 @@ Modern travel has been commodified into superficial checklist tourism. Social me
 ## 🏮 Our Solution
 Sutradhar AI acts as a digital storyteller. By pairing advanced generative models with strict structured JSON contracts, it dynamically weaves beautiful, customized cultural profiles tailored to any hamlet, town, or city. It moves away from standard listicles and generic tourist guides to provide multi-layered narrative boards, deep regional sub-modules, and localized perspectives that guide travelers to visit with reverence, deep context, and genuine curiosity.
 
+✅ The Application was built and validated in Google AI Studio and the repository contains the full implementation.
+
 ---
 
 ## ✨ Key Features
