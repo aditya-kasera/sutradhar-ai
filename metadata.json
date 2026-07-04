@@ -1,0 +1,6 @@
+{
+  "name": "Sutradhar AI",
+  "description": "An AI Cultural Companion that reveals the deeper meaning, history, food, traditions, and local stories behind travel destinations.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

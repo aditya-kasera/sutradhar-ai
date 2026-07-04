@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-serif: "Playfair Display", Georgia, serif;
+  --font-sans: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --color-neutral-900: #161616;
+  --color-neutral-950: #0a0a0a;
+  --color-border-subtle: rgba(255, 255, 255, 0.1);
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: #0a0a0a;
+  color: #e5e5e5;
+  margin: 0;
+}
+
+.serif {
+  font-family: var(--font-serif);
+}
+
+.sans {
+  font-family: var(--font-sans);
+}
+
+.text-balance {
+  text-wrap: balance;
+}
+
+.border-subtle {
+  border-color: rgba(255, 255, 255, 0.1);
+}
+
+.bg-card {
+  background-color: #161616;
+}
+
+/* Custom print style for elegance if printed */
+@media print {
+  body, html {
+    background-color: white !important;
+    background-image: none !important;
+    color: black !important;
+  }
+  
+  /* Hide navigation, buttons, and maps view elements from print */
+  nav, button, a, hr, .no-print {
+    display: none !important;
+  }
+
+  /* Make containers print full width without layout constraints */
+  .max-w-6xl, .max-w-4xl, .lg\:col-span-5, .lg\:col-span-7, .lg\:col-span-8, .lg\:col-span-4, .lg\:col-span-12 {
+    width: 100% !important;
+    max-width: 100% !important;
+    float: none !important;
+    display: block !important;
+  }
+
+  /* Stack layout elements smoothly on print output */
+  main, .grid, .flex {
+    display: block !important;
+  }
+
+  /* Convert dark background cards into elegant, high-contrast, black-on-white sections */
+  .bg-card, .bg-neutral-950, .bg-neutral-950\/30, .bg-neutral-950\/40, .bg-neutral-950\/50, .bg-neutral-950\/60, .bg-neutral-950\/20, .bg-amber-500\/5, .bg-gradient-to-br {
+    background-color: #ffffff !important;
+    background-image: none !important;
+    color: #000000 !important;
+    border: 1px solid #d4d4d8 !important;
+    box-shadow: none !important;
+    margin-bottom: 1.5rem !important;
+    padding: 1.5rem !important;
+    page-break-inside: avoid;
+  }
+
+  p, span, h1, h2, h3, h4, li, strong, div, blockquote {
+    color: #000000 !important;
+    text-shadow: none !important;
+  }
+
+  h1 {
+    font-size: 30pt !important;
+    margin-bottom: 8pt !important;
+    line-height: 1.1 !important;
+  }
+
+  h2 {
+    font-size: 18pt !important;
+    margin-top: 14pt !important;
+    margin-bottom: 6pt !important;
+  }
+
+  h3 {
+    font-size: 14pt !important;
+    margin-top: 10pt !important;
+    margin-bottom: 4pt !important;
+  }
+
+  p, li {
+    font-size: 10pt !important;
+    line-height: 1.4 !important;
+  }
+
+  /* Avoid page-breaks occurring inside structured paragraphs or sections */
+  p, li, blockquote, section, header {
+    page-break-inside: avoid;
+  }
+}
